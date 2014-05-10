@@ -11,25 +11,27 @@
     $testing = $_SESSION['test'];
     if (($user_pushed == 1))
     {
+        //if user pushed 1, then incident occurred nearby. So use the postal code given by request header for location.
+
         ?>
 
         
         <Gather>
         <?php
-        echo '<Say>Where did the incident take place?</Say>';
-        echo '<Say>If it was nearby, press 1.</Say>';
-        echo '<Say>To manually enter your postal code, press 2.</Say>';
+        echo '<Say>Ok, so the incident occurred nearby</Say>';
         echo '</Gather>';
     }
      if (($user_pushed == 2))
     {
+
+        
         ?>
 
         
-        <Gather>
+        <Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_6.php'; ?>" method='GET' numDigits="6">
         <?php
-        echo '<Say>Please enter the postal code where the incident took place?</Say>';
-        echo '<Say>To manually enter your postal code, press 2.</Say>';
+
+        echo '<Say>Please enter the 6 digit postal code where the incident took place?</Say>';
         echo '</Gather>';
     }
     else {

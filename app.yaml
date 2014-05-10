@@ -25,6 +25,16 @@ handlers:
   script: phone_report_2.php  
 - url: /phone_report_3.*
   script: phone_report_3.php 
+- url: /phone_report_4.*
+  script: phone_report_4.php   
+- url: /phone_report_5.*
+  script: phone_report_5.php
+- url: /phone_report_6.*
+  script: phone_report_6.php      
+- url: /phone_report_7.*
+  script: phone_report_7.php   
+- url: /phone_report_8.*
+  script: phone_report_8.php   
 
 - url: /sms-test.*
   script: sms-test.php

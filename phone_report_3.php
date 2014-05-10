@@ -7,6 +7,12 @@
     # @start snippet
     $user_pushed = (int) $_REQUEST['Digits'];
     $_SESSION['knowsAttacker'] = $user_pushed;
+    if($user_pushed ==1){
+        $_SESSION['knowsAttacker'] = 'Y';
+    }
+    if($user_pushed ==2){
+        $_SESSION['knowsAttacker']= 'N';
+    }
     # @end snippet
     $testing = $_SESSION['test'];
     if (($user_pushed == 1) || ($user_pushed ==2))

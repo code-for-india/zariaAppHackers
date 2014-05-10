@@ -5,7 +5,7 @@
 session_start();
 $_SESSION['test'] = 'hellofdsa';
 $web = array();
-$web['default'] = array('receptionist','filereport', 'clinics', 'duck');
+$web['default'] = array('receptionist','filereport', 'about', 'duck');
 //$web['location'] = array('receptionist','east-bay', 'san-jose', 'marin');
 
 /* Get the menu node, index, and url */
@@ -27,10 +27,10 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response>\n";
 switch($destination) {
 	case 'filereport': ?>
 		<Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_1.php'; ?>" method='GET' numDigits="1">
-			<Say>Please enter 1 to file a report.</Say>
+			<Say voice="alice" language ="en-IN">Please enter 1 to file a report.</Say>
 		</Gather>
 		<?php break;
-	case 'clinics': ?>
+	case 'about': ?>
 		<Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/processZipForClinic.php'; ?>" method='GET' numDigits="5">
 			<Say>Wrong answer bro.</Say>
 		</Gather>
@@ -50,10 +50,10 @@ switch($destination) {
 		<?php break;
 	default: ?>
 		<Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phonehome.php?node=default'; ?>" numDigits="1">
-			<Say>Hello and welcome to the Zariya Help Line.</Say>
-			<Say>To file an anonymous report, press 1</Say>
-			<Say>To learn more about us, press 2</Say>
-			<Say>To speak to a receptionist, press 0</Say>
+			<Say voice="alice" language ="en-IN">Hello and welcome to the Zariya Help Line.</Say>
+			<Say voice="alice" language ="en-IN">To file an anonymous report, press 1</Say>
+			<Say voice="alice" language ="en-IN">To learn more about us, press 2</Say>
+			<Say voice="alice" language ="en-IN">To speak to a receptionist, press 0</Say>
 		</Gather>
 		<?php
 		break;

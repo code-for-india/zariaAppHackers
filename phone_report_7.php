@@ -13,7 +13,7 @@
     {
         ?>
         
-        <Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_7.php'; ?>" method='GET' numDigits="2">
+        <Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_8.php'; ?>" method='GET' numDigits="2">
         <?php
         echo '<Say>Please enter the day that the incident took place.</Say>';
         echo '</Gather>';
