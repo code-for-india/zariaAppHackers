@@ -10,4 +10,14 @@ handlers:
   script: test123.php
 - url: /smstest
   script: smstest.php
+- url: /sms-test.*
+  script: sms-test.php
+- url: /post_example.*
+  script: post_example.php
+- url: /bad_words.*
+  script: index.html
+- url: /sms-reply.*
+  script: sms-reply.php
+- url: /twiliosmsreply.*
+  script: twilio_sms_reply.php
 
