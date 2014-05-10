@@ -44,7 +44,9 @@
             $redirect_file = "../additional_info.php";
             break;
         default:
-            $redirect_file = "";
+            if(isset($_SESSION['views']))
+              unset($_SESSION['views']);
+            $redirect_file = "default.php";
             break;
     }
 

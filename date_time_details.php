@@ -20,7 +20,7 @@
     echo "<Response>\n";
     echo "<Message statusCallback=\"person_details.php\">\n";
     //echo "$redirect_file \n" ;
-    echo "This is a message2\n";
+    echo "This is a date time details page\n";
     echo "</Message>\n";
     echo "</Response>";
 
