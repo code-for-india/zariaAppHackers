@@ -5,10 +5,11 @@
     echo '<Response>';
     session_start();
     # @start snippet
+    $incidentTypes = array('EVE_TEASING', 'VOYEURISM', 'ACID_VIOLENCE', 'STALKING', 'RAPE', 'DISROBING', 'DOMESTIC_VIOLENCE', 'MARITAL_RAPE', 'OTHER_INCIDENT');
     $user_pushed = (int) $_REQUEST['Digits'];
-    $_SESSION['incidentType'] = $user_pushed;
+    $_SESSION['incidentType'] = $incidentTypes[$user_pushed-1];
     # @end snippet
-    $testing = $_SESSION['test'];
+    //$testing = $_SESSION['test'];
     if (($user_pushed >= 1) || ($user_pushed <=9))
     {
         ?>
