@@ -5,10 +5,15 @@
 
 <Response>
     <Message> 
-        WELCOME to Zaria Incident Report System
-        Reply with the relevant option(s):
-        person det 1
-        person det 2
+        Zaria Incident Report System
+        Please enter your relationship with the person affected; Choose Relevant option:
+        1 - Self
+        2 - Friend
+        3 - Relative
+        4 - Not Related
+        Also enter If you know the person; Choos Relevant Option:
+        1 - yes, I know the person
+        2 - no, No I don't
     </Message>
 </Response>
     

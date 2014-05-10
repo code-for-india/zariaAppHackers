@@ -5,10 +5,12 @@
 
 <Response>
     <Message> 
-        WELCOME to Zaria Incident Report System
-        Reply with the relevant option(s):
-        add info 1 
-        add info 2
+        Zaria Incident Report System
+        Please enter any other relavent information:
+        Comments
+        Your name (optional)
+        Your email
+        Your number
     </Message>
 </Response>
     

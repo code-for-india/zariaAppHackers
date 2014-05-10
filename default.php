@@ -1,18 +1,8 @@
 <?php
     include 'credentials.php';
     $MessageSid = $_REQUEST['MessageSid'];
-    $sms_content = $_REQUEST['Body'];
 
     session_start();
-    /*
-    //creating a session key with phonenumber
-    if($sms_content == "hello") {
-        session_start();
-        $redirect_file = "../incident_options.php";
-        $_SESSION['phNumber'] = $_REQUEST['From'];
-        $_SESSION['stage'] = 'initial';
-    } 
-    */
 /*
     1. User sends a message and gets options about incident list
     2. User sends the incident ids and is directed to date and time
@@ -24,43 +14,51 @@
     
     if(isset($_SESSION['views']))
         $_SESSION['views']=$_SESSION['views']+1;
-    else
+    else {
         $_SESSION['views']=1;
+        $_SESSION['post_string'] = array();
+    }
+    //$sms_content = $_REQUEST['Body'];
 
     switch($_SESSION['views']) {
         case(1):
             $redirect_file = "../incident_options.php";
+            $_SESSION['post_string']['incidentList'] = $_REQUEST['Body'];
             break;
         case(2):
             $redirect_file = "../date_time_details.php";
+            $_SESSION['post_string']['date'] = $_REQUEST['Body'];
             break;
         case(3):
             $redirect_file = "../location_data.php";
+            $_SESSION['post_string']['location'] = $_REQUEST['Body'];
             break;
         case(4):
             $redirect_file = "../person_details.php";
+            $_SESSION['post_string']['person'] = $_REQUEST['Body'];
             break;
         case(5):
             $redirect_file = "../additional_info.php";
+            $_SESSION['post_string']['comments'] = $_REQUEST['Body'];
             break;
         default:
             if(isset($_SESSION['views']))
               unset($_SESSION['views']);
             $redirect_file = "default.php";
+            echo "<Response>\n";
+            echo "<Message statusCallback=\"helloworld.php\">\n";
+            //echo "$redirect_file \n" ;
+            echo "This is a THE END!!\n";
+            var_dump($_SESSION['post_string']);
+            echo "</Message>\n";
+            echo "</Response>";
+            exit;
             break;
     }
 
 
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-    /*
-    echo "<Response>\n";
-    echo "<Message statusCallback=\"date_time_details.php\">\n";
-    //echo "$redirect_file \n" ;
-    echo "This is a message1\n";
-    echo "</Message>\n";
-    echo "</Response>";
-    */
 
 ?>
 

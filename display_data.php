@@ -5,8 +5,10 @@
 
 <Response>
     <Message> 
-        Zaria Incident Report System
-        Please enter the address of incident
+        <?php 
+            if(isset($_SESSION['post_string']))
+                echo "post string is ". $_SESSION['post_string'];?>
     </Message>
 </Response>
     
+
