@@ -6,19 +6,27 @@
     session_start();
     # @start snippet
     $user_pushed = (int) $_REQUEST['Digits'];
+    $_SESSION['knowsAttacker'] = $user_pushed;
     # @end snippet
     $testing = $_SESSION['test'];
-    if ($user_pushed == 1)
+    if (($user_pushed == 1) || ($user_pushed ==2))
     {
         ?>
 
         
-        <Gather>
+        <Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_4.php'; ?>" method='GET' numDigits="1">
         <?php
-        echo '<Say>You in the 3rd file now dog.</Say>';
-        echo '<Say>'.$testing.'</Say>';
-        echo '<Say>If yes, press 1. </Say>';
-        echo '<Say>If no, press 2. </Say>';
+        echo '<Say>What type of incident are you reporting?</Say>';
+        echo '<Say>For Eve Teasing, press 1. </Say>';
+        echo '<Say>For voyeurism, press 2. </Say>';
+        echo '<Say>For acid violence, press 3. </Say>';
+        echo '<Say>For stalking, press 4. </Say>';
+        echo '<Say>For rape, press 5. </Say>';
+        echo '<Say>For disrobing, press 6. </Say>';
+        echo '<Say>For domestic violence, press 7. </Say>';
+        echo '<Say>For marital rape, press 8. </Say>';
+        echo '<Say>For other, press 9. </Say>';
+
         echo '</Gather>';
     }
     else {
