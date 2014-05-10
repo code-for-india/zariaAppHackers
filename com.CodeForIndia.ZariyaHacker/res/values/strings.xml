@@ -6,6 +6,7 @@
     <string name="title_section2">View Report</string>
     <string name="title_section3">Track</string>
     <string name="title_section4">Connect</string>
+    <string name="action_info">Info</string>
     <string name="action_settings">Settings</string>
 
 </resources>
