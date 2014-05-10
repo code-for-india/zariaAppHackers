@@ -8,6 +8,8 @@ handlers:
   script: helloworld.php
 - url: /index\.html
   script: test123.php
+- url: /smstest
+  script: smstest.php
 - url: /sms-test.*
   script: sms-test.php
 - url: /post_example.*
@@ -16,7 +18,4 @@ handlers:
   script: index.html
 - url: /sms-reply.*
   script: sms-reply.php
-
-
-
 
