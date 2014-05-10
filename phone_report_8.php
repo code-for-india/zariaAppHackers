@@ -10,14 +10,14 @@
     # @end snippet
    $_SESSION['dateString'] = '2014-'.$_SESSION['month'].'-'.$_SESSION['day'];
     //$testing = $_SESSION['test'];
-   $dataArray = array('person'=>$_SESSION['whoIsReporting'], 'doYouKnow'=>$_SESSION['knowsAttacker'], 'firstTimeCrime'=>'X', 'incidentList'=>$_SESSION['incidentType'], 'otherIncidence'=>'', 'location'=>$_SESSION[''], 'locationLat'=>$_SESSION['latitude'],'locationLng'=>$_SESSION['longitude'], 'incidentDate'=>$_SESSION['dateString'], 'incidentTime'=>$_SESSION['12:00'], 'firstName'=>'anonymous', 'lastName'=>'anonymous', 'email'=>'anonymous', 'number'=>'anonymous' );
+   $dataArray = array('person'=>$_SESSION['whoIsReporting'], 'doYouKnow'=>$_SESSION['knowsAttacker'], 'firstTimeCrime'=>'X', 'incidentList'=>$_SESSION['incidentType'], 'otherIncidence'=>' ', 'location'=>$_SESSION['postalCode'], 'locationLat'=>$_SESSION['latitude'],'locationLng'=>$_SESSION['longitude'], 'incidentDate'=>$_SESSION['dateString'], 'incidentTime'=>$_SESSION['12:00'], 'firstName'=>'anonymous', 'lastName'=>'anonymous', 'email'=>'anonymous', 'number'=>'anonymous' );
 
+   //echo '<Say>'.$dataArray.'</Say>';
+    $jsonData =  json_encode($dataArray,true);
 
-    $jsonData =  json_encode($dataArray);
-
-    if (($user_pushed))
+    if (($jsonData))
     {
-       // $response = http_post_fields('http://54.186.110.31/submitReport', $dataArray);
+       $response = http_post_fields('http://54.186.110.31/submitReport', $dataArray);
         ?>
         
         <Gather>
