@@ -1,10 +1,12 @@
-application: zariyaapp
+application: zariyaapp1729
 version: 1
 runtime: php
 api_version: 1
 
 handlers:
-- url: /.*
+- url: /
   script: helloworld.php
+- url: /index\.html
+  script: test123.php
 
 
