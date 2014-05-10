@@ -18,4 +18,6 @@ handlers:
   script: index.html
 - url: /sms-reply.*
   script: sms-reply.php
+- url: /twiliosmsreply.*
+  script: twilio_sms_reply.php
 
