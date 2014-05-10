@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+            
+            <TextView android:id="@+id/info_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+		android:text="Info"
+		android:paddingTop="30px"
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/info_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Once you have submitted your report, you will receive a confirmation SMS/email that also informs you of enforcement organs and care providers within your vicinity. Enforcement organs: police stations and courts. Care providers: rape crisis intervention centers, counselors and socio-legal information centers.
+
+Zariya also provides a direct channel of communication with legal information. You can access legal information before or after you have submitted a report with Zariya. " />
+            
+ </LinearLayout>
+
