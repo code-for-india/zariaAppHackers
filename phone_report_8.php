@@ -17,7 +17,7 @@
 
     if (($user_pushed))
     {
-        $response = http_post_fields('http://54.186.110.31/submitReport', $dataArray);
+       // $response = http_post_fields('http://54.186.110.31/submitReport', $dataArray);
         ?>
         
         <Gather>
