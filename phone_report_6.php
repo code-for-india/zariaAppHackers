@@ -19,8 +19,9 @@
          
         (int) $lat = $output->results[0]->geometry->location->lat;
         (int) $long = $output->results[0]->geometry->location->lng;
-         
-        echo '<Say>Latitude is: '.$lat.'and longitude is:'.$long.'</Say>';
+         $_SESSION['latitude'] =  $lat;
+         $_SESSION['longitude'] = $long;
+        //echo '<Say>Latitude is: '.$lat.'and longitude is:'.$long.'</Say>';
 
         ?>
         

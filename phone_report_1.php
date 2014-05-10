@@ -7,7 +7,10 @@
     # @start snippet
     $user_pushed = (int) $_REQUEST['Digits'];
     # @end snippet
-    $testing = $_SESSION['test'];
+    //$testing = $_SESSION['test'];
+    
+    
+    
     if ($user_pushed == 1)
     {
         ?>
@@ -22,7 +25,6 @@
         echo '<Say>If you are a friend of a survivor, press 2. </Say>';
         echo '<Say>If you are a relative of a survivor, press 3. </Say>';
         echo '<Say>If you did not know the victim, press 4. </Say>';
-        //$_SESSION['whoIsReporting'] = $_REQUEST['Digits'];
         echo '</Gather>';
     }
     else {
