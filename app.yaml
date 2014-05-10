@@ -6,6 +6,10 @@ api_version: 1
 handlers:
 - url: /
   script: helloworld.php
+- url: /default.*
+  script: default.php
+- url: /redirect_0.*
+  script: redirect_0.php
 - url: /index\.html
   script: test123.php
 - url: /smstest
@@ -20,4 +24,8 @@ handlers:
   script: sms-reply.php
 - url: /twiliosmsreply.*
   script: twilio_sms_reply.php
+- url: /test_form
+  script: test_form.php
+- url: /send_sms.*
+  script: send_sms.php
 
