@@ -2,7 +2,7 @@
     //include 'credentials.php';
     //session_start();
     //$MessageSid = $_REQUEST['MessageSid'];
-    //$sms_content = $_REQUEST['MessageStatus'];
+    $sms_content = $_REQUEST['MessageStatus'];
     
 
     header("content-type: text/xml");
@@ -13,7 +13,7 @@
     <Message> Your message sid is
         <?php
             //echo "message sid = $MessageSid\n";
-            //echo "sms content = $sms_content\n";
+            echo "sms content = $sms_content\n";
         ?>
         Called the redirect 0 file!
     </Message>
