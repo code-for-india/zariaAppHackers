@@ -14,7 +14,7 @@ handlers:
   script: test123.php
 - url: /smstest
   script: smstest.php
-<<<<<<< HEAD
+
 - url: /response_1.php
   script: response_1.php
 - url: /phonehome.*
@@ -25,7 +25,7 @@ handlers:
   script: phone_report_2.php  
 - url: /phone_report_3.*
   script: phone_report_3.php 
-=======
+
 - url: /sms-test.*
   script: sms-test.php
 - url: /post_example.*
@@ -41,4 +41,3 @@ handlers:
 - url: /send_sms.*
   script: send_sms.php
 
->>>>>>> efb31c7102d916e72155445e8d07e899a38bab37
