@@ -8,5 +8,6 @@ handlers:
   script: helloworld.php
 - url: /index\.html
   script: test123.php
-
+- url: /smstest.*
+  script: smstest.php
 
