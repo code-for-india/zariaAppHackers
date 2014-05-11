@@ -34,16 +34,7 @@ switch($destination) {
 		<Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/processZipForClinic.php'; ?>" method='GET' numDigits="5">
 			<Say>Wrong answer bro.</Say>
 		</Gather>
-		<?php break;
-	case 'east-bay': ?>
-		<Say>Take BART towards San Francisco / Milbrae. Get off on Powell Street. Walk a block down 4th street</Say>
-		<?php break;
-	case 'san-jose': ?>
-		<Say>Take Cal Train to the Milbrae BART station. Take any Bart train to Powell Street</Say>
-		<?php break;
-	case 'duck'; ?>
-		<Play>duck.mp3</Play>
-		<?php break;
+		<?php 
 	case 'receptionist'; ?>
 		<Say>Please wait while we connect you</Say>
 		<Dial>4252833462</Dial>

@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+            
+            <TextView android:id="@+id/about_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:paddingTop="30px"
+		android:text="Justice with Zariya"
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/justice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Redress and recovery for a survivor is much more than just legal justice. When a woman faces domestic or sexual violence, her physical, social, emotional, intellectual and psychological well-being is hurt. Zariya’s justice is a process with which women can work through the legal, social and psychological hurdles of rebuilding their life after a traumatizing experience. " />
+            
+       <TextView android:id="@+id/about_textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+		android:text="zariya mission"
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/zariyamission_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="10px"
+            android:text="Guide women who have faced gender-based violence in rebuilding their lives.
+Increase the reporting rate to bring it closer to the actual number of incidences.
+Produce knowledge and data that can be used by women, academics and policy-makers alike." />
+            
+          
+          <TextView android:id="@+id/about_textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+		android:text="zariya vision"
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/zariyavision_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="10px"
+            android:text="Challenge the stigma and logistical barriers to reporting sexual or domestic violence.
+Cultivate a safe space for women to report their experiences and demand justice.
+Bring all the organs and services that can help a woman to one hub." />
+          
+          <TextView android:id="@+id/about_textview4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+		android:text="zariya values"
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/zariyavalues_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="10px"
+            android:text="Situate the problems &amp; needs of the survivor at the center of the justice process. Reduce emotional re-traumatization and re-rape experienced when reporting to insensitive and unsympathetic listeners. Facilitate robust transparency and accountability that is powerful enough to have a crime deterrence effect." />
+            
+ </LinearLayout>
+

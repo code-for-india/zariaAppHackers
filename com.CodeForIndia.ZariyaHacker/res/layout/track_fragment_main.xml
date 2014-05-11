@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+   
+          <TextView
+            android:id="@+id/track_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="30px"
+            android:text="Justice delayed is justice denied. In an average case, it takes courts five to ten years to reach an agreement. With Zariya, we reduce delay. Along with care providers, you can monitor your own justice progress. We provide you with tools to ensure that your legal demands and social, emotional and psychological needs are met.
+
+We believe that providing a gateway to report, access, connect and track are key process elements for enacting justice in the lives of survivors of gender-based violence. "/>
+
+</RelativeLayout>

@@ -8,6 +8,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -38,19 +42,23 @@ public class MainActivity extends ActionBarActivity {
              
      // create new tabs and set up the titles of the tabs
         ActionBar.Tab mReportTab = actionBar.newTab().setText(
-                                getString(R.string.title_section1));
+                                getString(R.string.title_report));
         ActionBar.Tab mViewTab = actionBar.newTab().setText(
-                                getString(R.string.title_section2));
+                                getString(R.string.title_view));
         ActionBar.Tab mTrackTab = actionBar.newTab().setText(
-                                getString(R.string.title_section3));
+                                getString(R.string.title_track));
         ActionBar.Tab mConnectTab = actionBar.newTab().setText(
-                                getString(R.string.title_section4));
+                                getString(R.string.title_connect));
+        ActionBar.Tab mAboutTab = actionBar.newTab().setText(
+        						getString(R.string.title_about));
+
         
      // create the fragments
         Fragment mReportFragment = new ReportFragment();
         Fragment mViewFragment = new ViewFragment();
         Fragment mTrackFragment = new TrackFragment();
         Fragment mConnectFragment = new ConnectFragment();
+        Fragment mAboutFragment = new AboutFragment();
 
         // bind the fragments to the tabs - set up tabListeners for each tab
         mReportTab.setTabListener(new MyTabsListener(mReportFragment,
@@ -61,12 +69,16 @@ public class MainActivity extends ActionBarActivity {
                                 getApplicationContext()));
         mConnectTab.setTabListener(new MyTabsListener(mConnectFragment,
                                 getApplicationContext()));
+        mAboutTab.setTabListener(new MyTabsListener(mAboutFragment,
+                getApplicationContext()));
 
         // add the tabs to the action bar
+        actionBar.addTab(mAboutTab);
         actionBar.addTab(mReportTab);
         actionBar.addTab(mViewTab);
         actionBar.addTab(mTrackTab);
         actionBar.addTab(mConnectTab);
+        
         
         if(savedInstanceState!=null)
         	actionBar.setSelectedNavigationItem(savedInstanceState.getInt("tab_key", 0));
@@ -78,8 +90,8 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-    	 MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
+    	MenuInflater inflater = getMenuInflater();
+    	inflater.inflate(R.menu.main, menu);
         return true;
     }
 
@@ -89,7 +101,9 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        
+        MenuInflater inflater = getMenuInflater();
+        
         return super.onOptionsItemSelected(item);
     }
 

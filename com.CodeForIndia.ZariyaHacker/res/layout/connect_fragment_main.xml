@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+            
+                        
+          <TextView
+            android:id="@+id/connect_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="30px"
+            android:text="We establish gateway telephonic conversations with care providers so that you feel you can trust them before you have a face-to-face meeting with them." />
+            
+ </LinearLayout>
+
