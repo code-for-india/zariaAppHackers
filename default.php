@@ -52,11 +52,7 @@
             echo "<Response>\n";
             echo "<Message statusCallback=\"helloworld.php\">\n";
             //echo "$redirect_file \n" ;
-            echo "This is a THE END!!\n";
-            var_dump($loc_lat_long);
             $json_string = json_encode($_SESSION['post_string']);
-            echo $json_string."\n";
-            var_dump($_SESSION);
             echo "</Message>\n";
             echo "</Response>";
             exit;
