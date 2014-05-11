@@ -25,7 +25,7 @@
     else {
         // We'll implement the rest of the functionality in the 
         // following sections.
-        echo "<Say voice="alice" language ="en-IN">Sorry, I can't do that yet.</Say>";
+        echo '<Say voice="alice" language ="en-IN">Sorry, please select one of the available options.</Say>';
         echo '<Redirect>handle-incoming-call.php</Redirect>';
     }
  

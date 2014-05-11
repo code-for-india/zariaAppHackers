@@ -31,7 +31,7 @@
         // We'll implement the rest of the functionality in the 
         // following sections.
         echo "<Say>Sorry, your selection was not between 1 and 4.</Say>";
-        echo '<Redirect>handle-incoming-call.php</Redirect>';
+        echo '<Redirect>/phone_report_2.php</Redirect>';
     }
  
     echo '</Response>';

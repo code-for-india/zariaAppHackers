@@ -34,7 +34,7 @@
     else {
         // We'll implement the rest of the functionality in the 
         // following sections.
-        echo "<Say voice="alice" language ="en-IN">Please enter the month from 1 through 12 in 2 digit format.</Say>";
+        echo '<Say voice="alice" language ="en-IN">Sorry, please select one of the available options.</Say>';
         echo '<Redirect>handle-incoming-call.php</Redirect>';
     }
  

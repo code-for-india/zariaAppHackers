@@ -22,7 +22,7 @@
     else {
         // We'll implement the rest of the functionality in the 
         // following sections.
-        echo "<Say voice="alice" language ="en-IN">Please enter the day of the month using two digits.</Say>";
+        echo '<Say voice="alice" language ="en-IN">Sorry, please select one of the available options.</Say>';
         echo '<Redirect>phone_report_7.php</Redirect>';
     }
  
