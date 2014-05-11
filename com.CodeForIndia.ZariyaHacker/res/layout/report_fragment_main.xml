@@ -1,49 +1,553 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" >
+    		xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-    <LinearLayout
-                android:id="@+id/person_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
- 
-        	
-        	
- 		</LinearLayout>
- 	<LinearLayout
-                android:id="@+id/incident_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
- 
- 		</LinearLayout>
- 	<LinearLayout
-                android:id="@+id/location_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
- 
- 		</LinearLayout>
- 	<LinearLayout
-                android:id="@+id/information_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
- 
- 		</LinearLayout>
- 	<LinearLayout
-                android:id="@+id/submit_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
- 
- 		</LinearLayout>
-    
+    <LinearLayout android:id="@+id/person_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="visible">
 
+            
+            <TextView android:id="@+id/person_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30px"
+        android:paddingLeft="10px"
+        android:textSize="20sp" 
+		android:text="Person"
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/person_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+             android:paddingTop="30px"
+            android:text="Who is reporting the incident ?"
+            android:textStyle="bold" />
+
+          <RadioGroup android:id="@+id/whoradioButton1"
+              android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+	          <RadioButton
+	              android:id="@+id/radioButton1"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:paddingLeft="10px"
+	              android:text="Survivor" />
+	
+	          <RadioButton
+	              android:id="@+id/radioButton2"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:paddingLeft="10px"
+	              android:text="Friend of survivor" />
+	          
+	          <RadioButton
+	              android:id="@+id/radioButton3"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:paddingLeft="10px"
+	              android:text="Relative of survivor" />
+	
+	          <RadioButton
+	              android:id="@+id/radioButton4"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:paddingLeft="10px"
+	              android:text="Stranger" />
+	          
+	      </RadioGroup>
+            
+       <TextView android:id="@+id/person_textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Do you know the assailant ?"
+		android:paddingLeft="10px"
+		android:textStyle="bold"/>
+       
+       <RadioGroup android:id="@+id/assistradioButton1"
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+	          <RadioButton
+	              android:id="@+id/radioButton5"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:paddingLeft="10px"
+	              android:text="Yes" />
+	
+	          <RadioButton
+	              android:id="@+id/radioButton6"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:paddingLeft="10px"
+	              android:text="No" />
+	          
+	    </RadioGroup>
+
+	       <Button
+	           android:id="@+id/next_incident"
+	           style="?android:attr/buttonStyleSmall"
+	           android:layout_width="77dp"
+	           android:layout_height="wrap_content"
+	           android:layout_gravity="right"
+	           android:paddingLeft="10px"
+	           android:text="Next" />
+
+       </LinearLayout>
+       
+    <LinearLayout android:id="@+id/incident_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/person_layout">
+
+            
+            <TextView android:id="@+id/person_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30px"
+        android:layout_gravity="left"
+        android:textSize="20sp" 
+		android:text="Incident "
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/incident_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+             android:paddingTop="30px"
+            android:text="What incident would you like to report?"
+            android:textStyle="bold" />
+
+          <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eve Teasing" />
+          
+          <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voyeurism" />
+          
+          <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acid Violence" />
+          
+          <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stalking" />
+          
+          <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rape" />
+          
+          <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disrobing" />
+          
+          <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Domestic Violence" />
+          
+          <CheckBox
+                android:id="@+id/checkBox8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marital Rape" />
+          
+          <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other" />
+          
+          <EditText
+              android:id="@+id/incident_other_text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:visibility="invisible"
+              android:ems="10" />
+	          
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+       
+              <Button
+		           android:id="@+id/previous_person"
+		           style="?android:attr/buttonStyleSmall"
+		           android:layout_width="wrap_content"
+		           android:layout_height="wrap_content"
+		           android:layout_gravity="left"
+		           android:layout_marginLeft="10px"
+		           android:text="Previous" />
+              
+		       <Button
+		           android:id="@+id/next_location"
+		           style="?android:attr/buttonStyleSmall"
+		           android:layout_width="77dp"
+		           android:layout_height="wrap_content"
+		           android:layout_gravity="right"
+		           android:text="Next" />
+	       </LinearLayout>
+	       
+       </LinearLayout>
+       
+    <LinearLayout android:id="@+id/location_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/person_layout">
+
+            
+            <TextView android:id="@+id/location_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30px"
+        android:layout_gravity="left"
+        android:textSize="20sp" 
+		android:text="Location"
+		android:textStyle="bold|italic"/>
+            
+          <TextView
+            android:id="@+id/location_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+             android:paddingTop="30px"
+            android:text="Location"
+            android:textStyle="bold" />
+
+          <EditText
+              android:id="@+id/location_editText1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10" >
+
+              <requestFocus />
+          </EditText>
+
+           <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+              
+               
+	        <Button
+	            android:id="@+id/previous_incident"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10px"
+	            android:text="Previous" />
+       
+		       <Button
+		           android:id="@+id/next_location2"
+		           style="?android:attr/buttonStyleSmall"
+		           android:layout_width="77dp"
+		           android:layout_height="wrap_content"
+		           android:layout_gravity="right"
+		           android:text="Next" />
+	       
+	       </LinearLayout>
+       </LinearLayout>
+       
+       <LinearLayout android:id="@+id/location_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/person_layout">
+
+                    
+          <TextView
+            android:id="@+id/time_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:paddingTop="30px"
+            android:text="Time of incident"
+            android:textStyle="bold" />
+
+          <TimePicker
+              android:id="@+id/timePicker1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="-60px" 
+              android:layout_gravity="top|center_vertical"
+              android:scaleX="0.6"
+              android:scaleY="0.6"/>
+          
+          <TextView
+            android:id="@+id/date_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:layout_marginTop="-60px" 
+            android:text="Date of incident"
+            android:textStyle="bold" />
+
+          <DatePicker
+              android:id="@+id/datePicker1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="-90px" 
+              android:layout_gravity="top|center_vertical"
+              android:scaleX="0.6"
+              android:scaleY="0.6" />
+       
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+		       
+              <Button
+	            android:id="@+id/previous_location"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10px"
+	            android:layout_marginTop="-30px" 
+	            android:text="Previous" />
+              
+              
+		       <Button
+		           android:id="@+id/next_information"
+		           style="?android:attr/buttonStyleSmall"
+		           android:layout_width="77dp"
+		           android:layout_height="wrap_content"
+		           android:layout_gravity="right"
+		           android:layout_marginTop="-40px" 
+		           android:text="Next" />
+	       
+	       </LinearLayout>
+       </LinearLayout>
+       
+       <LinearLayout android:id="@+id/information_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/person_layout">
+
+        
+            
+            <TextView android:id="@+id/location_textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30px"
+        android:layout_gravity="left"
+        android:text="Please note that all the information is kept private and is used only for internal records. "
+		android:textStyle="bold|italic"/>
+            
+         
+          <TextView
+            android:id="@+id/info_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:paddingTop="30px"
+            android:text="Information/Desciption"
+            android:textStyle="bold" />
+
+          <EditText
+              android:id="@+id/info_editText1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"
+              android:inputType="textMultiLine" />
+          
+          <TextView
+            android:id="@+id/file_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:text="Upload File"
+            android:textStyle="bold" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+       
+                 
+	        <Button
+	            android:id="@+id/previous_location2"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10px"
+	            android:text="Previous" />
+        
+		       <Button
+		           android:id="@+id/next_submit"
+		           style="?android:attr/buttonStyleSmall"
+		           android:layout_width="77dp"
+		           android:layout_height="wrap_content"
+		           android:layout_gravity="right"
+		           android:text="Next" />
+		       
+		       </LinearLayout>
+       </LinearLayout>
+       
+       <LinearLayout android:id="@+id/submit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/person_layout">
+
+        
+            <TextView android:id="@+id/submit_textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30px"
+        android:layout_gravity="left"
+        android:textSize="20sp" 
+		android:text="Please note that all the information is kept private and is used only for internal records."
+		android:textStyle="bold|italic"/>
+            
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+              
+              <TextView
+            android:id="@+id/submit_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:text="First Name" />
+              
+              
+            <EditText
+              android:id="@+id/submit_editText1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"/>
+              
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+              
+              <TextView
+            android:id="@+id/submit_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:text="Last Name" />
+              
+              
+            <EditText
+              android:id="@+id/submit_editText2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"/>
+              
+          </LinearLayout>
+          
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+              
+              <TextView
+            android:id="@+id/submit_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:text="Email" />
+              
+              
+            <EditText
+              android:id="@+id/submit_editText3"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"/>
+              
+          </LinearLayout>
+          
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+              
+              <TextView
+            android:id="@+id/submit_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:text="Phone number" />
+              
+              
+            <EditText
+              android:id="@+id/submit_editText4"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"/>
+              
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+            
+              <Button
+            android:id="@+id/previous_information"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="Previous" />
+            
+              
+              
+		       <Button
+		           android:id="@+id/submit"
+		           style="?android:attr/buttonStyleSmall"
+		           android:layout_width="wrap_content"
+		           android:layout_height="wrap_content"
+		           android:layout_gravity="right"
+		           android:text="SUBMIT" />
+	       </LinearLayout>
+       </LinearLayout>
+          
 </RelativeLayout>
+
