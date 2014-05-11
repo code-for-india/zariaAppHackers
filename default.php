@@ -1,7 +1,5 @@
 <?php
-    include 'credentials.php';
-    $MessageSid = $_REQUEST['MessageSid'];
-
+    require('my_geo_code.php');
     session_start();
 /*
     1. User sends a message and gets options about incident list
@@ -11,45 +9,54 @@
     5. User sends person details and is directed to additional info page
     6. The data is posted to the database and goodbye message is sent.
 */
-    
-    if(isset($_SESSION['views']))
-        $_SESSION['views']=$_SESSION['views']+1;
-    else {
-        $_SESSION['views']=1;
-        $_SESSION['post_string'] = array();
+     // start the session
+    session_start();
+    // get the session varible if it exists
+    $counter = $_SESSION['counter'];
+    // if it doesnt, set the default
+    if(!strlen($counter)) {
+    $counter = 0;
     }
-    //$sms_content = $_REQUEST['Body'];
+    // increment it
+    $counter++;
+    // save it
+    $_SESSION['counter'] = $counter;
 
-    switch($_SESSION['views']) {
+
+    switch($_SESSION['counter']) {
         case(1):
-            $redirect_file = "../incident_options.php";
-            $_SESSION['post_string']['incidentList'] = $_REQUEST['Body'];
+    $redirect_file = "../incident_options.php";
             break;
         case(2):
+            $_SESSION['post_string']['incidentList'] = $_REQUEST['Body'];
             $redirect_file = "../date_time_details.php";
-            $_SESSION['post_string']['date'] = $_REQUEST['Body'];
             break;
         case(3):
+            $_SESSION['post_string']['date'] = $_REQUEST['Body'];
             $redirect_file = "../location_data.php";
-            $_SESSION['post_string']['location'] = $_REQUEST['Body'];
             break;
         case(4):
+            $_SESSION['post_string']['location'] = $_REQUEST['Body'];
             $redirect_file = "../person_details.php";
-            $_SESSION['post_string']['person'] = $_REQUEST['Body'];
             break;
         case(5):
+            $_SESSION['post_string']['person'] = $_REQUEST['Body'];
             $redirect_file = "../additional_info.php";
-            $_SESSION['post_string']['comments'] = $_REQUEST['Body'];
             break;
-        default:
-            if(isset($_SESSION['views']))
-              unset($_SESSION['views']);
-            $redirect_file = "default.php";
+        case(6):
+            //$redirect_file = "default.php";
+            $_SESSION['post_string']['comments'] = $_REQUEST['Body'];
+            $loc_lat_long = get_geo_loc($_SESSION['post_string']['location']);
+            if(isset($_SESSION['counter']))
+              unset($_SESSION['counter']);
             echo "<Response>\n";
             echo "<Message statusCallback=\"helloworld.php\">\n";
             //echo "$redirect_file \n" ;
             echo "This is a THE END!!\n";
-            var_dump($_SESSION['post_string']);
+            var_dump($loc_lat_long);
+            $json_string = json_encode($_SESSION['post_string']);
+            echo $json_string."\n";
+            var_dump($_SESSION);
             echo "</Message>\n";
             echo "</Response>";
             exit;
