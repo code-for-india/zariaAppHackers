@@ -24,21 +24,21 @@
      if (($user_pushed == 2))
     {
 
-        
+
         ?>
 
         
         <Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_6.php'; ?>" method='GET' numDigits="6">
         <?php
 
-        echo '<Say>Please enter the 6 digit postal code where the incident took place?</Say>';
+        echo '<Say voice="alice" language ="en-IN">Please enter the 6 digit postal code where the incident took place?</Say>';
         echo '</Gather>';
     }
     else {
         // We'll implement the rest of the functionality in the 
         // following sections.
-        echo "<Say>Sorry, I can't do that yet.</Say>";
-        echo '<Redirect>handle-incoming-call.php</Redirect>';
+        echo "<Say voice="alice" language ="en-IN">Sorry, please select one of the available options.</Say>";
+        echo '<Redirect>/phone_report_5.php</Redirect>';
     }
  
     echo '</Response>';

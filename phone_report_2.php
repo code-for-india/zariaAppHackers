@@ -16,15 +16,15 @@
             $_SESSION['whoIsReporting'] = $user_pushed;
             $arr = array('SURVIVOR', 'FRIEND_OF_SURVIVOR', 'RELATIVE_OF_SURVIVOR', 'NOT_RELATED');
             $_SESSION['whoIsReporting'] = $arr[$user_pushed-1];
-            
+
         ?>
         
         <Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_3.php'; ?>" method='GET' numDigits="1">
         <?php
-        echo '<Say> Do you know the attacker or assailant? </Say>';
-        echo '<Say>'.$testing.'</Say>';
-        echo '<Say>If yes, press 1. </Say>';
-        echo '<Say>If no, press 2. </Say>';
+        echo '<Say voice="alice" language ="en-IN"> Do you know the attacker or assailant? </Say>';
+        //echo '<Say>'.$testing.'</Say>';
+        echo '<Say voice="alice" language ="en-IN">If yes, press 1. </Say>';
+        echo '<Say voice="alice" language ="en-IN">If no, press 2. </Say>';
         echo '</Gather>';
     }
     else {

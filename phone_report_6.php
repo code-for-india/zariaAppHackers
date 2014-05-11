@@ -27,14 +27,14 @@
         
         <Gather action="<?php echo 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/phone_report_7.php'; ?>" method='GET' numDigits="2">
         <?php
-        echo '<Say>Please enter the month that the incident took place.</Say>';
+        echo '<Say voice="alice" language ="en-IN">Please enter the month that the incident took place.</Say>';
         echo '</Gather>';
     }
     
     else {
         // We'll implement the rest of the functionality in the 
         // following sections.
-        echo "<Say>Please enter the month from 1 through 12 in 2 digit format.</Say>";
+        echo "<Say voice="alice" language ="en-IN">Please enter the month from 1 through 12 in 2 digit format.</Say>";
         echo '<Redirect>handle-incoming-call.php</Redirect>';
     }
  
